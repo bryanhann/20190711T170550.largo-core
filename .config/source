@@ -1,0 +1,3 @@
+export LARGO_IGNORE=$LARGO_CORE/.ignore
+export LARGO_REPOS=$LARGO_IGNORE/repos
+export LARGO_MOUNT=$LARGO_IGNORE/mount

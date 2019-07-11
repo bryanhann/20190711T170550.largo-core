@@ -1,0 +1,12 @@
+source ~/.config/largo-core/source
+
+largo mount --uninstall FOO
+[ -d $LARGO_MOUNT/FOO ] && echo failed: $0 [a] && exit 1
+
+largo mount --install FOO > ~/delete.me 2> ~/delete.me
+[ ! -d $LARGO_MOUNT/FOO ] && echo failed [b]: $0 && exit 2
+
+largo mount --uninstall FOO
+[ -d $LARGO_MOUNT/FOO ] && echo failed: $0 [c] && exit 3
+
+exit 0
